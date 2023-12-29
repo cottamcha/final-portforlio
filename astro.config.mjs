@@ -9,6 +9,6 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://jacobcottam.xyz",
   integrations: [solidJs(), tailwind(), icon()],
-  output: "static",
+  output: "server",
   adapter: netlify(),
 });
