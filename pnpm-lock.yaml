@@ -37,6 +37,9 @@ devDependencies:
   motion:
     specifier: ^10.16.4
     version: 10.16.4
+  tslib:
+    specifier: ^2.6.2
+    version: 2.6.2
 
 packages:
 

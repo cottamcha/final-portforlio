@@ -9,9 +9,6 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   site: "https://jacobcottam.xyz",
   integrations: [solidJs(), tailwind(), icon()],
-  build: {
-    transpile: ["tslib"]
-  },
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
 });
