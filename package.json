@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "jacobcottam",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,7 +13,13 @@
     "@astrojs/solid-js": "^3.0.3",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.0.8",
+    "astro-font": "^0.0.44",
+    "astro-icon": "^1.0.1",
+    "motion": "^10.16.4",
     "solid-js": "^1.8.7",
     "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@iconify-json/ri": "^1.1.18"
   }
 }
