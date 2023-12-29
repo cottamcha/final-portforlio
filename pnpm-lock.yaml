@@ -37,9 +37,6 @@ devDependencies:
   '@iconify-json/ri':
     specifier: ^1.1.18
     version: 1.1.18
-  tslib:
-    specifier: ^2.6.2
-    version: 2.6.2
 
 packages:
 
@@ -4416,6 +4413,7 @@ packages:
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     requiresBuild: true
+    dev: false
 
   /type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
