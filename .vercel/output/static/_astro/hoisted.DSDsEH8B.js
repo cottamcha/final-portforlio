@@ -1,0 +1,1 @@
+const n=({x:e,y:t})=>{document.documentElement.style.setProperty("--x",e.toFixed(2)),document.documentElement.style.setProperty("--xp",(e/window.innerWidth).toFixed(2)),document.documentElement.style.setProperty("--y",t.toFixed(2)),document.documentElement.style.setProperty("--yp",(t/window.innerHeight).toFixed(2))};document.body.addEventListener("pointermove",n);
