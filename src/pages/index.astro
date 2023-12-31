@@ -8,6 +8,32 @@ import TimeZoneCard from "../components/TimeZoneCard.astro";
 import Now from "../components/Now.astro";
 ---
 
+<script>
+  import { stagger, spring, timeline, type TimelineDefinition } from "motion";
+  import { loaderAnimation } from "../lib/constants";
+  const cards = document.querySelectorAll(".card");
+
+  const springConfig = { velocity: 100, stiffness: 50, damping: 10 };
+  const staggerDelay = 0.3;
+  const duration = 0.4;
+
+  const sequence = [
+    loaderAnimation,
+    [
+      cards,
+      { y: ["40%", "0%"], opacity: [0, 1] },
+      {
+        at: "-0.1",
+        duration,
+        delay: stagger(staggerDelay),
+        easing: spring(springConfig),
+      },
+    ],
+  ];
+
+  timeline(sequence as TimelineDefinition);
+</script>
+
 <Layout
   title="Jacob Cottam - Web Developer"
   description="Web developer with strong focus on performance and user experience"
@@ -37,29 +63,3 @@ import Now from "../components/Now.astro";
     </Card>
   </main>
 </Layout>
-
-<script>
-  import { stagger, spring, timeline, type TimelineDefinition } from "motion";
-  import { loaderAnimation } from "../lib/constants";
-  const cards = document.querySelectorAll(".card");
-
-  const springConfig = { velocity: 100, stiffness: 50, damping: 10 };
-  const staggerDelay = 0.3;
-  const duration = 0.4;
-
-  const sequence = [
-    loaderAnimation,
-    [
-      cards,
-      { y: ["40%", "0%"], opacity: [0, 1] },
-      {
-        at: "-0.1",
-        duration,
-        delay: stagger(staggerDelay),
-        easing: spring(springConfig),
-      },
-    ],
-  ];
-
-  timeline(sequence as TimelineDefinition);
-</script>
