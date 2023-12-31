@@ -8,6 +8,5 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://jacobcottam.xyz",
   integrations: [solidJs(), icon(), UnoCSS({ injectReset: true })],
-  output: "server",
-  adapter: netlify(),
+  output: "static",
 });
