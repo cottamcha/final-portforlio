@@ -2,24 +2,11 @@
 
 ---
 
-<main>
-  <article data-glow>
-    <div data-glow>hi</div>
-  </article>
-  <article data-glow>
-    <div data-glow>hi</div>
-  </article>
-</main>
+<article class="card" data-glow>
+  <div class="card-content" data-glow></div>
+</article>
 
 <style>
-  :root {
-    --backdrop: hsl(0 0% 60% / 0.12);
-    --radius: 14;
-    --border: 3;
-    --backup-border: var(--backdrop);
-    --size: 300;
-  }
-
   article:first-of-type {
     --base: 80;
     --spread: 500;
@@ -36,39 +23,26 @@
   *:before {
     box-sizing: border-box;
   }
-  body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-    background: hsl(0 0% 4%);
-  }
 
-  .wrapper {
-    position: relative;
-  }
-
-  article {
+  .card {
     aspect-ratio: 3 / 4;
-    border-radius: calc(var(--radius) * 1px);
+    border-radius: 14px; /* Updated from --radius variable */
     width: 260px;
     position: relative;
-    grid-template-rows: 1fr auto;
     box-shadow: 0 1rem 2rem -1rem black;
     padding: 1rem;
     display: grid;
     gap: 1rem;
-    backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
+    backdrop-filter: blur(5px); /* Updated from --cardblur variable */
   }
-  main {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 120ch;
-    max-width: calc(100vw - 2rem);
+
+  article {
+    border-radius: calc(var(--radius) * 1px);
     position: relative;
+    grid-template-rows: 1fr auto;
+    box-shadow: 0 1rem 2rem -1rem black;
+    padding: 1rem;
+    backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
   }
 
   /* Glow specific styles */
@@ -145,7 +119,6 @@
   [data-glow] > [data-glow] {
     border-radius: calc(var(--radius) * 1px);
     border-width: calc(var(--border-size) * 20);
-    filter: blur(calc(var(--border-size) * 10));
     background: none;
     pointer-events: none;
   }
