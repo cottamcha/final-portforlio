@@ -1,5 +1,5 @@
 <div class="sparkle-button">
-  <button>
+  <a href="/">
     <span class="spark"></span>
     <!-- <span class="spark"></span> -->
     <span class="backdrop"></span>
@@ -28,8 +28,8 @@
         stroke-linecap="round"
         stroke-linejoin="round"></path>
     </svg>
-    <span class="text">Generate Site</span>
-  </button>
+    <span class="text">Go Back</span>
+  </a>
   <div class="bodydrop"></div>
   <span aria-hidden="true" class="particle-pen">
     <svg
@@ -307,7 +307,7 @@
     overflow: hidden;
   }
 
-  button {
+  a {
     --cut: 0.1em;
     --active: 0;
     --bg: radial-gradient(
@@ -348,7 +348,7 @@
     scale: calc(1 + (var(--active) * 0.1));
   }
 
-  button:active {
+  a:active {
     scale: 1;
   }
 
@@ -367,7 +367,7 @@
     transition: color var(--transition);
   }
 
-  button:is(:hover, :focus-visible) path {
+  a:is(:hover, :focus-visible) path {
     animation-name: bounce;
   }
 
@@ -395,7 +395,7 @@
     --base: 30%;
   }
 
-  button:before {
+  a:before {
     content: "";
     position: absolute;
     inset: -0.25em;
@@ -461,7 +461,7 @@
   }
 
   @supports (selector(:has(:is(+ *)))) {
-    body:has(button:is(:hover, :focus-visible)) {
+    body:has(a:is(:hover, :focus-visible)) {
       --active: 1;
       --play-state: running;
     }
@@ -470,7 +470,7 @@
     }
   }
 
-  button:is(:hover, :focus-visible) ~ :is(.bodydrop, .particle-pen) {
+  a:is(:hover, :focus-visible) ~ :is(.bodydrop, .particle-pen) {
     --active: 1;
     --play-state: runnin;
   }
@@ -482,7 +482,7 @@
     z-index: -1;
   }
 
-  button:is(:hover, :focus-visible) {
+  a:is(:hover, :focus-visible) {
     --active: 1;
     --play-state: running;
   }
@@ -547,7 +547,7 @@
     transition: background var(--transition);
   }
 
-  button svg {
+  a svg {
     inline-size: 1.25em;
     translate: -25% -5%;
   }
